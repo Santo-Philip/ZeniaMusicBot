@@ -11,6 +11,9 @@
     "telegram-bot",
     "pyrogram"
     ],
+    "engines" : {
+      "node": "16.0.0"
+    },
     "stack": "container",
     "env": {
       "API_ID": {
