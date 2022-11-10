@@ -20,7 +20,7 @@ from config import BANNED_USERS
 from strings import get_command
 from ZeniaMusic import app
 from ZeniaMusic.misc import db
-from ZeniaMusic.utils import (Yukkibin, get_channeplayCB,
+from ZeniaMusic.utils import (Zeniabin, get_channeplayCB,
                               seconds_to_min)
 from ZeniaMusic.utils.database import (get_cmode, is_active_chat,
                                        is_music_playing)
@@ -216,7 +216,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
             )
         if "🏷" in msg:
             msg = msg.replace("🏷", "")
-        link = await Yukkibin(msg)
+        link = await Zeniabin(msg)
         med = InputMediaPhoto(
             media=link, caption=_["queue_3"].format(link)
         )

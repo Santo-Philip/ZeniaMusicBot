@@ -15,7 +15,7 @@ import config
 from strings import get_command
 from ZeniaMusic import app
 from ZeniaMusic.misc import SUDOERS
-from ZeniaMusic.utils.database.memorydatabase import get_video_limit
+# from ZeniaMusic.utils.database.memorydatabase import get_video_limit
 from ZeniaMusic.utils.formatters import convert_bytes
 
 VARS_COMMAND = get_command("VARS_COMMAND")
@@ -26,7 +26,7 @@ async def varsFunc(client, message):
     mystic = await message.reply_text(
         "Please wait.. Getting your config"
     )
-    v_limit = await get_video_limit()
+    # v_limit = await get_video_limit()
     bot_name = config.MUSIC_BOT_NAME
     up_r = f"[Repo]({config.UPSTREAM_REPO})"
     up_b = config.UPSTREAM_BRANCH
@@ -86,7 +86,6 @@ async def varsFunc(client, message):
     owners = [str(ids) for ids in config.OWNER_ID]
     owner_id = " ,".join(owners)
     tg_aud = convert_bytes(config.TG_AUDIO_FILESIZE_LIMIT)
-    tg_vid = convert_bytes(config.TG_VIDEO_FILESIZE_LIMIT)
     text = f"""**MUSIC BOT CONFIG:**
 
 **<u>Basic Vars:</u>**
@@ -112,7 +111,6 @@ async def varsFunc(client, message):
 `YOUTUBE_EDIT_SLEEP` : **{yt_sleep} seconds**
 `TELEGRAM_EDIT_SLEEP` :** {tg_sleep} seconds**
 `CLEANMODE_MINS` : **{cm} mins**
-`VIDEO_STREAM_LIMIT` : **{v_limit} chats**
 `SERVER_PLAYLIST_LIMIT` :** {playlist_limit}**
 `PLAYLIST_FETCH_LIMIT` :** {fetch_playlist}**
 
@@ -122,7 +120,6 @@ async def varsFunc(client, message):
 
 **<u>Playsize Vars:</u>**
 `TG_AUDIO_FILESIZE_LIMIT` :** {tg_aud}**
-`TG_VIDEO_FILESIZE_LIMIT` :** {tg_vid}**
 
 **<u>URL Vars:</u>**
 `SUPPORT_CHANNEL` : **{s_c}**

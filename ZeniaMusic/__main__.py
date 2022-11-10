@@ -72,7 +72,7 @@ async def init():
     except:
         pass
     await Zenia.decorators()
-    LOGGER("ZeniaMusic").info("Yukki Music Bot Started Successfully")
+    LOGGER("ZeniaMusic").info("Zenia Music Bot Started Successfully")
     await idle()
 
 
