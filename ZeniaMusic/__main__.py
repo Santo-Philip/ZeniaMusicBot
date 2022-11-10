@@ -55,7 +55,7 @@ async def init():
     await app.start()
     for all_module in ALL_MODULES:
         importlib.import_module("ZeniaMusic.plugins" + all_module)
-    LOGGER("Yukkimusic.plugins").info(
+    LOGGER("Zeniamusic.plugins").info(
         "Successfully Imported Modules "
     )
     await userbot.start()
@@ -78,4 +78,4 @@ async def init():
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("ZeniaMusic").info("Stopping Yukki Music Bot! GoodBye")
+    LOGGER("ZeniaMusic").info("Stopping Zenia Music Bot! GoodBye")
