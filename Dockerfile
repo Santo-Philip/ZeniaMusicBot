@@ -1,5 +1,5 @@
-FROM nikolaik/python-nodejs:python3.9-nodejs18
-RUN apt-get update -y && apt-get upgrade -y \
+FROM nikolaik/python-nodejs:latest
+RUN apt-get update \
     && apt-get install -y --no-install-recommends ffmpeg \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
