@@ -90,7 +90,7 @@ async def ping_com(client, message: Message, _):
             IMAGE = (
                 config.TELEGRAM_AUDIO_URL
                 if typo == "Audio"
-                else config.TELEGRAM_VIDEO_URL
+                else config.TELEGRAM_AUDIO_URL
             )
         elif videoid == "soundcloud":
             IMAGE = config.SOUNCLOUD_IMG_URL
@@ -270,7 +270,7 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
             IMAGE = (
                 config.TELEGRAM_AUDIO_URL
                 if typo == "Audio"
-                else config.TELEGRAM_VIDEO_URL
+                else config.TELEGRAM_AUDIO_URL
             )
         elif videoid == "soundcloud":
             IMAGE = config.SOUNCLOUD_IMG_URL

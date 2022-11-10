@@ -485,7 +485,7 @@ class Call(PyTgCalls):
                         original_chat_id,
                         photo=config.TELEGRAM_AUDIO_URL
                         if str(streamtype) == "audio"
-                        else config.TELEGRAM_VIDEO_URL,
+                        else config.TELEGRAM_AUDIO_URL,
                         caption=_["stream_3"].format(
                             title, check[0]["dur"], user
                         ),

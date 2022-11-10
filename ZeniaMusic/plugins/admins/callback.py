@@ -5,7 +5,7 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 
 from config import (AUTO_DOWNLOADS_CLEAR, BANNED_USERS,
                     SOUNCLOUD_IMG_URL, STREAM_IMG_URL,
-                    TELEGRAM_AUDIO_URL, TELEGRAM_VIDEO_URL, adminlist)
+                    TELEGRAM_AUDIO_URL, adminlist)
 from ZeniaMusic import YouTube, app
 from ZeniaMusic.core.call import Zenia
 from ZeniaMusic.misc import SUDOERS, db
@@ -340,7 +340,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 run = await CallbackQuery.message.reply_photo(
                     photo=TELEGRAM_AUDIO_URL
                     if str(streamtype) == "audio"
-                    else TELEGRAM_VIDEO_URL,
+                    else TELEGRAM_AUDIO_URL,
                     caption=_["stream_3"].format(
                         title, check[0]["dur"], user
                     ),
@@ -353,7 +353,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 run = await CallbackQuery.message.reply_photo(
                     photo=SOUNCLOUD_IMG_URL
                     if str(streamtype) == "audio"
-                    else TELEGRAM_VIDEO_URL,
+                    else TELEGRAM_AUDIO_URL,
                     caption=_["stream_3"].format(
                         title, check[0]["dur"], user
                     ),
