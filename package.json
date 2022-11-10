@@ -11,11 +11,11 @@
     "telegram-bot",
     "pyrogram"
     ],
-    "engines" : {
-      "node": "16.0.0"
-    },
     "stack": "container",
     "env": {
+      "engines" : {
+      "node": "16.0.0"
+      },
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
         "value": "",
